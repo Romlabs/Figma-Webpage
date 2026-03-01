@@ -273,9 +273,9 @@ body.login {
 /* Knight Background */
 .knight-large {
     position: absolute;
-    right: 180px;
-    bottom: 300px;
-    width: 450px;
+    right: 10px;
+    bottom: 200px;
+    width: 600px;
     opacity: 0.95;
     z-index: 1;
 }
@@ -283,9 +283,9 @@ body.login {
 /* CSG Logo Centered on Chest */
 .csg-logo {
     position: absolute;
-    right: 280px;
-    bottom: 300px;
-    width: 250px;
+    right: 155px;
+    bottom: 200px;
+    width: 300px;
     z-index: 2;
 }
 
