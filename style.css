@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "Medieval";
+    src: url("../assets/fonts/Cinzel-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* ================= HOME ================= */
+
+body.home {
+    background: url("../assets/images/bg-home.gif") no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* UI Container */
+.home-ui {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 140px;
+}
+
+/* TITLE + LOGOS WRAPPER */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+/* Logos beside title */
+.logo {
+    width: 110px;
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Jacquard 12', cursive;
+    font-size: 72px;
+    line-height: 1.1;
+    color: #c8ff3d;
+    text-shadow: 
+        0 0 10px rgba(0,0,0,0.8),
+        0 0 25px rgba(0,0,0,0.6);
+    margin: 0;
+}
+
+/* ================= GAME MENU ================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu a {
+    font-family: 'Jacquard 12', cursive;
+    font-size: 36px;
+    letter-spacing: 4px;
+    color: #c8ff3d;
+    text-decoration: none;
+    padding: 8px 30px;
+    transition: 0.25s ease;
+}
+
+/* Hover Effect */
+.menu a:hover {
+    transform: scale(1.15);
+    text-shadow: 0 0 15px #c8ff3d;
+}
+
+/* Active (Keyboard Selected) */
+.menu a.active {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #c8ff3d, 0 0 40px #c8ff3d;
+}
+
+/* Knight */
+.knight-sit {
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    width: 300px;
+    z-index: 2;
+}
+
+/* ================= AUTH (LOGIN / REGISTER) ================= */
+
+body.auth {
+    background: url("../assets/images/auth-bg.png") center / cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knight-stand {
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    width: 360px;
+    z-index: 1;
+}
+
+.form-card {
+    background: rgba(0,0,0,0.55);
+    padding: 40px;
+    border-radius: 12px;
+    width: 420px;
+    z-index: 2;
+}
+
+.form-card.large {
+    width: 620px;
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 15px;
+    border-radius: 6px;
+    border: none;
+    background: #9bb400;
+    color: #000;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #d8ff2f;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c0e600;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row div {
+    flex: 1;
+}
+
+.forgot {
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.small {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.small a {
+    color: #d8ff2f;
+}
+
+.captcha {
+    margin: 15px 0;
+}
+/* ================= LOGIN PAGE REDESIGN ================= */
+
+body.login {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Layout wrapper */
+.login-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 10%;
+}
+
+/* Glass card */
+.login-card {
+    width: 520px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+/* Header (logo + title) */
+.login-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.um-logo {
+    width: 60px;
+}
+
+/* Inputs */
+.login-card input {
+    background: #9bb400;
+    height: 45px;
+    font-size: 16px;
+}
+
+/* Forgot link */
+.forgot {
+    font-size: 13px;
+    text-align: right;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Login button */
+.login-btn {
+    background: #d8ff2f;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #c6f000;
+    transform: scale(1.03);
+}
+
+/* RIGHT SIDE VISUALS FIXED */
+
+.login-visual {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Knight Background */
+.knight-large {
+    position: absolute;
+    right: 10px;
+    bottom: 200px;
+    width: 600px;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+/* CSG Logo Centered on Chest */
+.csg-logo {
+    position: absolute;
+    right: 155px;
+    bottom: 200px;
+    width: 300px;
+    z-index: 2;
+}
+
+/* ================= REGISTER PAGE REDESIGN ================= */
+
+body.register {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Layout wrapper */
+.register-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 8%;
+}
+
+/* Glass card */
+.register-card {
+    width: 580px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+/* Inputs & row */
+.register-card input,
+.register-card select {
+    background: #9bb400;
+    height: 45px;
+    font-size: 16px;
+}
+
+/* CAPTCHA & spacing */
+.register-card .captcha {
+    margin: 15px 0;
+}
+
+/* REGISTER button */
+.register-btn {
+    background: #d8ff2f;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.register-btn:hover {
+    background: #c6f000;
+    transform: scale(1.03);
+}
+
+/* Right side visuals */
+.register-visual {
+    position: absolute;
+    right: 300px;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.register-visual .knight-large {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+.register-visual .csg-logo {
+    position: absolute;
+    right: 200px;
+    bottom: 50px;
+    width: 400px;
+    z-index: 2;
+}
